@@ -1,1 +1,26 @@
-header
+{% load static %}
+<div class="wrapper">
+	<nav class="navbar navbar-expand-lg bg-body-tertiary my-header" data-bs-theme="dark">
+		<div class="container-fluid">
+			<button class="navbar-toggler my-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+				<img class="menu-img" src="{% static 'space_agency/icons/menu.svg' %}" alt="menu">
+			</button>
+			<div class="my-logo">
+				<a class="navbar-brand position-relative start-0 translate-middle" href="#">
+					<img src="{% static 'space_agency/icons/logo.svg' %}" alt="logo">
+				</a>
+			</div>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-sm-0 w-100 justify-content-center">
+			<li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="#">преимущества</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="#">фотографии</a>
+			</li>
+			</ul>
+		</div>
+		<button class="btn my-enter-btn" type="submit">вход</button>
+		</div>
+	</nav>
+</div>
