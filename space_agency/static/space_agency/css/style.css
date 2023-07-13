@@ -26,8 +26,8 @@
 :root{
 	--blue: rgba(0, 67, 130, 1);
 	--red: rgba(255, 52, 43, 1);
-	--grey: rgba(60, 60, 60, 1);
-	--light-grey: rgba(179, 179, 179, 1);
+	--gray: rgba(60, 60, 60, 1);
+	--light-gray: rgba(179, 179, 179, 1);
 	--black: rgba(10, 18, 30, 1);
 }
 body{
@@ -37,18 +37,15 @@ body{
 	font-size: 16px;
 	color: var(--black);
 }
-.my-header{
-	background-color: var(--black) !important;
-}
-.main-content{
-
-}
-.slider{
-
-}
 .wrapper{
 	max-width: 1140px;
+	padding: 0;
 	margin: 0 auto;
+}
+
+/* HEADER BLOCKS */
+.my-header{
+	background-color: var(--black) !important;
 }
 .my-logo{
 	margin-left: 10px;
@@ -63,3 +60,129 @@ body{
 .menu-img{
 	width: 30px;
 }
+/* END HEADER BLOCKS */
+
+/* MAIN BODY BLOCKS */
+
+.advantage{
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 26px;
+}
+.advantage p{
+	width: 223px;
+	margin-top: 30px;
+}
+.menu-text{
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.my-main-header{
+	max-width: 751px;
+}
+.my-main-header h1{
+	font-weight: 700;
+	font-size: 56px;
+}
+.my-description{
+	margin-top: 30px;
+	max-width: 751px;
+}
+.my-description p{
+	font-size: 18px;
+}
+.my-main-image img{
+	border-radius: 20px;
+	max-width: 457px;
+}
+
+/* END MAIN BODY BLOCKS */
+
+/* LAYOUT SUPPORT BLOCK */
+.mt-90px{
+	margin-top: 90px;
+}
+.mt-70px{
+	margin-top: 70px;
+}
+.ml-30px{
+	margin-left: 30px;
+}
+.mt-70px{
+	margin-top: 70px;
+}
+.p-20px div{
+	padding: 20px;;
+}
+/* END LAYOUT SUPPORT BLOCK */
+
+
+
+
+/* SLIDER BLOCKS */
+.my-slider{
+	background-color: var(--gray) !important;
+}
+.my-slider-header{
+	color: #fff
+}
+.my-slider-header h2{
+	font-size: 42px;
+	font-weight: 700;
+	line-height: 52px;
+}
+.slider{
+	position: relative;
+}
+.slider__item{
+	padding: 20px;
+	overflow: hidden;
+	display: flex !important;
+	justify-content: center;
+}
+.slider__item img{
+	max-width: 200px;
+	border-radius: 20px;
+}
+.slider__item.slick-center img{
+	border: 1px solid #fff;
+}
+.slick-track{
+	display: flex;
+}
+.slick-list{
+	overflow: hidden;
+}
+.slick-arrow{
+	position: absolute;
+	top: 50%;
+	margin-top: -28px;
+	z-index: 10;
+	font-size: 0;
+	width: 56px;
+	height: 56px;
+	border: none;
+}
+.slick-arrow.slick-prev{
+	left: 0;
+	background: url('../icons/left-arrow.svg') 0 0 / 100% no-repeat;
+}
+.slick-arrow.slick-next{
+	right: 0;
+	background: url('../icons/right-arrow.svg') 0 0 / 100% no-repeat;
+}
+.main-slider{
+	
+}
+.main-slider__item{
+	padding: 20px;
+	overflow: hidden;
+	display: flex !important;
+	justify-content: center;
+}
+.main-slider__item img{
+	max-width: 800px;
+	border-radius: 20px;
+}
+/* END SLIDER BLOCKS */

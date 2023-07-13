@@ -1,2 +1,5 @@
 Django==4.1
 mysqlclient
+Pillow
+django-filer
+django-admin-sortable2

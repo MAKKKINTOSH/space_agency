@@ -1,1 +1,56 @@
-slider
+{% load static %}
+{% load thumbnail %}
+<div class="container wrapper">
+	<div class="row justify-content-center my-slider-header">
+		<div class="col-auto text-center mt-90px">
+			<h2>Фотографии</h2>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-auto justify-content-center main-slider mt-70px">
+{% for image in images %}
+			<div class="container main-slider__item">
+				<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+					<img class="object-fit-cover" src="{{ image.image.url }}" alt="image">
+				</button>
+			</div>
+{% endfor %}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-auto justify-content-center slider">
+			<div class="slider__item">
+				<img src="{% static 'space_agency/images/01.jpg' %}" alt="image">
+			</div>
+			<div class="slider__item">
+				<img src="{% static 'space_agency/images/02.jpg' %}" alt="image">
+			</div>
+			<div class="slider__item">
+				<img src="{% static 'space_agency/images/03.jpg' %}" alt="image">
+			</div>
+			<div class="slider__item">
+				<img src="{% static 'space_agency/images/04.jpg' %}" alt="image">
+			</div>
+			<div class="slider__item">
+				<img src="{% static 'space_agency/images/05.jpg' %}" alt="image">
+			</div>
+		</div>	
+	</div>
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		  	<div class="modal-content">
+				<div class="modal-header">
+			  		<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+			  		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+			  	...
+				</div>
+				<div class="modal-footer">
+			  		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			  		<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+		  	</div>
+		</div>
+	</div>
+</div>

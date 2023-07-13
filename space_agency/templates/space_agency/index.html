@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	{% load static %}
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'space_agency/css/slick.css' %}">
 	<link rel="stylesheet" href="{% static 'space_agency/css/bootstrap.css' %}">
 	<link rel="stylesheet" href="{% static 'space_agency/css/style.css' %}">
 	<title>Document</title>
@@ -15,9 +16,12 @@
 	<div class="my-main-block">
 		{% include 'space_agency/layout/main_block.html' %}
 	</div>
-	<div class="my-slider">
+	<div class="my-slider mt-90px">
 		{% include 'space_agency/layout/slider.html' %}
 	</div>
+	<script src="{% static 'space_agency/js/jquery.min.js' %}"></script>
+	<script src="{% static 'space_agency/js/slick.min.js' %}"></script>
 	<script src="{% static 'space_agency/js/bootstrap.bundle.min.js' %}"></script>
+	<script src="{% static 'space_agency/js/main.js' %}"></script>
 </body>
 </html>

@@ -1,6 +1,40 @@
-<div class="col">
-	<div class="row"></div>
-</div>
-<div class="col">
-
+{% load static %}
+<div class="container overflow-hidden wrapper">
+	<div class="row justify-content-center">
+		<div class="col-auto">
+			<div class="text-center my-main-header mt-90px">
+				<h1>Космическое агенство</h1>
+			</div>
+			<div class="text-wrap my-description">
+				<p class="text-center">Национальное управление по аэронавтике и исследованию космического пространства — ведомство, относящееся к федеральному правительству США и подчиняющееся непосредственно президенту США.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row mt-90px">
+		<div class="col-xl-6 col-sm-12">
+			<div class="row gx-auto p-20px">
+				<div class="col d-flex flex-column justify-content-center align-items-center advantage">
+					<img src="{% static 'space_agency/icons/shuttle.svg' %}" alt="icon">
+					<p class="text-wrap">Спейс шаттлы - пилотируемые корабли</p>
+				</div>
+				<div class="col d-flex flex-column justify-content-center align-items-center advantage">
+					<img src="{% static 'space_agency/icons/telescope.svg' %}" alt="icon">
+					<p>Лучшее телескопическое оборудование</p>
+				</div>
+			</div>
+			<div class="row gx-auto p-20px">
+				<div class="col d-flex flex-column justify-content-center align-items-center advantage">
+					<img src="{% static 'space_agency/icons/moon.svg' %}" alt="icon">
+					<p>Целимся на Луну и Марс</p>
+				</div>
+				<div class="col d-flex flex-column justify-content-center align-items-center advantage">
+					<img src="{% static 'space_agency/icons/medal.svg' %}" alt="icon">
+					<p>Золотая медаль по научным исследованиям</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-xl-6 col-sm-12 d-flex justify-content-xl-end justify-content-center my-main-image">
+			<img src="{% static 'space_agency/images/space.jpg' %}" alt="space">
+		</div>
+	</div>
 </div>
