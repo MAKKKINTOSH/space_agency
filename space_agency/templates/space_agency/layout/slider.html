@@ -1,5 +1,5 @@
 {% load static %}
-<div class="container wrapper">
+<div class="container wrapper pb-30px">
 	<div class="row justify-content-center my-slider-header">
 		<div class="col-auto text-center mt-90px">
 			<h2>Фотографии</h2>
@@ -8,19 +8,19 @@
 	<div class="row justify-content-center">
 		<div class="col-auto d-flex justify-content-center main-slider mt-70px">
 {% for image in images %}
-			<div class="container-fluid main-slider__item">
+			<div class="main-slider__item">
 				<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
-					<img class="image-fluid" src="{{ image.image.url }}" alt="image">
+					<img class="main-slider__item__img w-100" src="{{ image.image.url }}" alt="image">
 				</button>
 			</div>
 {% endfor %}
 		</div>
 	</div>
-	<div class="row">
+	<div class="row justify-content-center">
 		<div class="col-auto justify-content-center slider">
 {% for image in images %}
-			<div class="container-fluid slider__item">
-				<img class="image-fluid" src="{{ image.image.url }}" alt="image">
+			<div class="slider__item">
+				<img src="{{ image.image.url }}" alt="image">
 			</div>
 {% endfor %}
 		</div>	

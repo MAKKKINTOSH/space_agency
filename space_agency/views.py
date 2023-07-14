@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpRequest
-from .models import Image
+from .models import Slider
 
 def indexView(request: HttpRequest):
 
-    images = Image.objects.all()
-    print(images)
+    images = Slider.objects.all()[0].image_set.all()
+    print(f"IMAGES {images}")
     context = {
         "images": images 
 	}
