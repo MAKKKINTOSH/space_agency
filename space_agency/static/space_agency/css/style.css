@@ -173,10 +173,9 @@ body{
 	background: url('../icons/right-arrow.svg') 0 0 / 100% no-repeat;
 }
 .main-slider{
-	
+	width: 90%;
 }
 .main-slider__item{
-	padding: 20px;
 	overflow: hidden;
 	display: flex !important;
 	justify-content: center;
@@ -184,5 +183,12 @@ body{
 .main-slider__item img{
 	max-width: 800px;
 	border-radius: 20px;
+}
+.galery{
+
+}
+.galery__item{
+	display: flex !important;
+	justify-content: center;
 }
 /* END SLIDER BLOCKS */

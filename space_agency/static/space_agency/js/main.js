@@ -1,5 +1,10 @@
 $(document).ready(function(){
-	$('.slider').slick({
+
+	let slider = $('.slider');
+	let mainSlider = $('.main-slider');
+	let internalSlider = $('.internal-slider');
+
+	slider.slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		dots: false,
@@ -9,8 +14,8 @@ $(document).ready(function(){
 		touchMove: false,
 		centerMode: true,
 		asNavFor: ".main-slider"
-	  });
-	$(".main-slider").slick({
+	});
+	mainSlider.slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: false,
@@ -19,9 +24,20 @@ $(document).ready(function(){
 		centerMode: true,
 		fade: true,
 		asNavFor: ".slider"
-	})
-	$(".main-slider__item.slick-center").on('click', function(){
-		console.log('1233')
+	});
+	internalSlider.slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: false,
+		touchMove: false,
+		centerMode: true,
+		fade: true,
+	});
+	slider.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
+		current_slide = nextSlide
 	})
 })
+
+// let current_slide = $('.slider').slick('slickCurrentSlide')
 
