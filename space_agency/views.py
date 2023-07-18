@@ -4,10 +4,11 @@ from .models import Slider
 
 def indexView(request: HttpRequest):
 
-    images = Slider.objects.all()[0].image_set.all()
-    print(f"IMAGES {images}")
-    context = {
-        "images": images 
-	}
+    sliders = Slider.objects.all()
+    context = dict()
+
+    if sliders:
+        images = sliders[0].image_set.all()
+        context['images'] = images 
 
     return render(request, "space_agency/index.html", context)
